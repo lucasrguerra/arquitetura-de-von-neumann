@@ -13,18 +13,11 @@ export default class DataBus extends Component {
         <div className="grid grid-cols-10">
           <p></p>
           <p></p>
-          <p></p>
           <div className="bg-green-400 text-white pt-3">
             <FiArrowDown size={'1.6em'}/>
           </div>
           <p></p>
           <p></p>
-          <div className="bg-green-400 text-white pt-3">
-            <FiArrowUp size={'1.6em'}/>
-          </div>
-        </div>
-        <div className="grid grid-cols-10">
-          <p></p>
           <p></p>
           <p></p>
           <div className="bg-green-400 text-white pt-3">
@@ -34,10 +27,18 @@ export default class DataBus extends Component {
         <div className="grid grid-cols-10">
           <p></p>
           <p></p>
+          <div className="bg-green-400 text-white pt-3">
+            <FiArrowUp size={'1.6em'}/>
+          </div>
+        </div>
+        <div className="grid grid-cols-10">
+          <p></p>
           <p></p>
           <div className="bg-green-400 text-white pt-3">
             <FiArrowUp size={'1.6em'}/>
           </div>
+          <p></p>
+          <p></p>
           <p></p>
           <p></p>
           <div className="bg-green-400 text-white pt-3">

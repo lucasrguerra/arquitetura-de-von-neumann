@@ -11,9 +11,10 @@ export default function ContextProvider({ children }) {
   const [dataBus, setDataBus] = useState("00000");
   const [controlUnit, setControlUnit] = useState({
     data: "00000",
-    instruction: "00",
+    command: "00",
     counter: "000",
   });
+  const [accumulator, setAccumulator] = useState("00000");
 
   return (
     <Context.Provider
@@ -22,6 +23,7 @@ export default function ContextProvider({ children }) {
         addressBus, setAddressBus,
         dataBus, setDataBus,
         controlUnit, setControlUnit,
+        accumulator, setAccumulator,
       }}
     >
       {children}

@@ -13,7 +13,7 @@ export default class MemoryInterface extends Component {
 
   render() {
     return (
-      <div className="border-2 border-gray-400 bg-white rounded-lg w-3/12">
+      <div className="border-2 border-gray-400 bg-white rounded-lg w-4/12">
         <div className="py-1 bg-slate-300 rounded-t-md">
           <p className="text-xl font-bold">Memória RAM</p>
         </div>
@@ -27,8 +27,8 @@ export default class MemoryInterface extends Component {
         </div>
 
         <div className="overflow-y-auto scroll-m-2 h-64 pr-4 m-1">
-          {this.context.memory.map((cell, index) => {
-            return <CellInteface cell={cell}/>;
+          {this.context.memory.map((cell) => {
+            return <CellInteface cell={cell} />;
           })}
         </div>
       </div>

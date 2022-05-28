@@ -25,13 +25,11 @@ export default class AddressBus extends Component {
         <div className="grid grid-cols-10">
           <p></p>
           <p></p>
-          <p></p>
           <div className="bg-blue-300 text-white pt-3">
             <FiArrowDown size={'1.6em'}/>
           </div>
         </div>
         <div className="grid grid-cols-10">
-          <p></p>
           <p></p>
           <p></p>
           <div className="bg-blue-300 text-white pt-3">

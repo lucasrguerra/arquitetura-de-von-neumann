@@ -20,12 +20,12 @@ export default class CellInteface extends Component {
 
   formatToValidNumber(input = Number) {
     input = parseInt(input);
-    if (input >= 0 && input <= 999) {
+    if (input >= 0 && input <= 9999) {
       return input;
     } else if (input < 0) {
       return input * -1;
-    } else if (input > 999) {
-      return 999;
+    } else if (input > 9999) {
+      return 9999;
     } else {
       return "";
     }
@@ -36,13 +36,16 @@ export default class CellInteface extends Component {
       return <option value={command.value}>{command.name}</option>;
     });
 
+    let color = this.props.cell.isActive ? "bg-yellow-500" : "";
+
     return (
-      <div className="border py-1 rounded mb-1">
+      <div className={`border py-1 rounded mb-1 ${color}`}>
         <div className="grid grid-cols-3 divide-x">
           <p className="font-semibold">{this.props.cell.address}</p>
 
           <div className="relative">
             <select
+              className="bg-transparent"
               value={Commands[this.props.cell.command].value}
               onChange={() => {}}
             >
@@ -50,7 +53,7 @@ export default class CellInteface extends Component {
             </select>
 
             <select
-              className="absolute left-0 w-full opacity-0"
+              className="absolute left-0 w-full opacity-0 bg-transparent"
               value={Commands[this.props.cell.command].value}
               onSelect={(event) => {
                 event.target.classList.replace("opacity-0", "opacity-100");
@@ -78,7 +81,7 @@ export default class CellInteface extends Component {
               className="absolute text-center left-0 w-full opacity-0 text-blue-600"
               type={"number"}
               value={this.state.value}
-              pattern="[0-9]{3}"
+              pattern="[0-9]{4}"
               onSelect={(event) => {
                 event.target.classList.replace("opacity-0", "opacity-100");
               }}
